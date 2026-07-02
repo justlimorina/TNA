@@ -1,8 +1,9 @@
-// Simple Hero Slider (auto + manual)
+// Hero Slider – hỗ trợ chỉ báo slide (indicators)
 document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelectorAll('.slider-slide');
   const nextBtn = document.querySelector('.slider-btn.next');
   const prevBtn = document.querySelector('.slider-btn.prev');
+  const indicators = document.querySelectorAll('.indicator');
   let current = 0;
   let timerId;
 
@@ -11,33 +12,39 @@ document.addEventListener('DOMContentLoaded', function() {
     if (wrapper) {
       wrapper.style.transform = `translateX(-${idx * 100}%)`;
     }
-    slides.forEach((slide,i) => {
+    slides.forEach((slide, i) => {
       slide.classList.toggle('active', i === idx);
     });
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle('active', i === idx);
+    });
+    current = idx;
   }
+
   function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
+    showSlide((current + 1) % slides.length);
   }
+
   function prevSlide() {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
+    showSlide((current - 1 + slides.length) % slides.length);
   }
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAuto();
+
+  if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAuto(); });
+  if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetAuto(); });
+
+  indicators.forEach((dot, i) => {
+    dot.addEventListener('click', () => { showSlide(i); resetAuto(); });
   });
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAuto();
-  });
+
   function autoSlide() {
-    timerId = setInterval(nextSlide, 4500);
+    timerId = setInterval(nextSlide, 4800);
   }
+
   function resetAuto() {
     clearInterval(timerId);
     autoSlide();
   }
-  showSlide(current);
+
+  showSlide(0);
   autoSlide();
 });

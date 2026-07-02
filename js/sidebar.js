@@ -51,13 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Scroll Elevation cho Header ---
-  const topAppBar = document.querySelector('.topnav');
-  if (topAppBar) {
+  const siteHeader = document.querySelector('.site-header');
+  if (siteHeader) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 10) {
-        topAppBar.classList.add('elevated');
+        siteHeader.classList.add('elevated');
       } else {
-        topAppBar.classList.remove('elevated');
+        siteHeader.classList.remove('elevated');
       }
     }, { passive: true });
   }
