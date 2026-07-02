@@ -70,7 +70,7 @@ fetch('featured-product.json')
     const box = document.getElementById('featured-box');
     if (box) {
       box.innerHTML = `
-        <center><h1 class="section-title" style="color: var(--gold-color); margin-bottom: 30px;">Sản phẩm nổi bật</h1></center>
+        <center><h1 class="section-title" style="margin-bottom: 30px;">Sản phẩm nổi bật</h1></center>
         <div class="featured-row">
           <div class="featured-image-col">
             <img src="${data.image}" alt="${data.title}" class="featured-img">

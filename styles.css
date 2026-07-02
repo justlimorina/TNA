@@ -542,8 +542,12 @@ body.dark-theme .theme-toggle { color: var(--gold); }
    FEATURED SECTION
    ============================================= */
 .featured-section {
-  background: var(--primary);
+  background: #4B1D09;
   padding: 50px 32px;
+}
+
+body.dark-theme .featured-section {
+  background: #251209;
 }
 
 /* Featured Box (dynamic) */
@@ -624,7 +628,7 @@ body.dark-theme .theme-toggle { color: var(--gold); }
 
 .featured-btn:hover {
   background: var(--gold-light) !important;
-  color: var(--primary) !important;
+  color: #4B1D09 !important;
   transform: translateY(-2px);
 }
 
