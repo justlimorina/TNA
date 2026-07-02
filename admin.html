@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang Admin - Sản phẩm nổi bật</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #c7372a;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Admin: Sản phẩm nổi bật</h1>
+
+  <form id="form-featured">
+    <label>Tiêu đề:</label>
+    <input type="text" name="title" value="">
+
+    <label>URL Hình ảnh:</label>
+    <input type="text" name="image" value="">
+
+    <label>Mô tả:</label>
+    <textarea name="description" rows="5"></textarea>
+
+    <label>Text nút:</label>
+    <input type="text" name="button" value="Xem thêm">
+
+    <label>Link chuyển đến:</label>
+    <input type="text" name="link" value="">
+
+    <button type="submit">Tạo JSON</button>
+  </form>
+
+  <h3>Kết quả JSON:</h3>
+  <pre id="output"></pre>
+
+  <p><i>📌 Sao chép nội dung JSON này và ghi đè vào file <b>featured-product.json</b> trong dự án của bạn.</i></p>
+
+  <script>
+    document.getElementById('form-featured').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        title: form.title.value,
+        image: form.image.value,
+        description: form.description.value,
+        button: form.button.value,
+        link: form.link.value
+      };
+
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sản phẩm | TNA</title>
+  <meta name="description" content="Các sản phẩm sofa cao cấp & nội thất hiện đại của TNA">
+  <link rel="shortcut icon" href="../image/TNA_icon.jpg" type="image/png" />
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+  <header class="topnav sticky">
+    <a href="../index.html" class="logo-link">
+      <img src="../image/TNA_icon_2.jpg" alt="TNA Logo" class="logo-img"/>
+    </a>
+    <nav id="mainNav">
+      <a href="../index.html"><i class="fa fa-home"></i> Trang chủ</a>
+      <a href="index.html"><i class="fa fa-cube"></i> Sản phẩm</a>
+      <a href="../about.html"><i class="fa fa-info-circle"></i> Giới thiệu</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggleBtn" class="theme-toggle" aria-label="Đổi chế độ sáng tối">
+        <i class="fa fa-moon-o"></i>
+      </button>
+      <button class="hamburger" id="menuBtn" aria-label="Menu"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Bộ sưu tập sản phẩm</h1>
+    <p>Sofa cao cấp & Nội thất hiện đại, tinh tế cho không gian sống của bạn.</p>
+  </section>
+
+  <!-- Filter and Search Section -->
+  <section class="filter-section">
+    <div class="filter-container">
+      <div class="search-box">
+        <i class="fa fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+      </div>
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter-btn active" data-filter="all">Tất cả</button>
+        <button class="filter-btn" data-filter="sofa">Sofa</button>
+        <button class="filter-btn" data-filter="sofa-da">Sofa Da</button>
+        <button class="filter-btn" data-filter="ban-tra">Bàn trà</button>
+        <button class="filter-btn" data-filter="ban-an">Bàn ăn</button>
+        <button class="filter-btn" data-filter="ghe-thu-gian">Ghế thư giãn</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="products" class="product-grid">
+    <!-- Mỗi sản phẩm một khối .product-card -->
+    <div class="product-card" data-category="sofa" data-name="sofa vải tối giản">
+      <div class="product-thumb">
+        <img src="../image/TNA_product_1.jpg" alt="Sofa vải tối giản"/>
+      </div>
+      <div class="product-info">
+        <h2>Sofa vải tối giản</h2>
+        <p>Phong cách hiện đại, chất liệu vải cao cấp, khung gỗ tự nhiên bền chắc.</p>
+        <div class="product-meta">
+          <span class="tag">Sofa</span>
+          <span class="price">19.500.000đ</span>
+        </div>
+        <button class="btn-detail" 
+                data-title="Sofa vải tối giản"
+                data-image="../image/TNA_product_1.jpg"
+                data-desc="Phong cách hiện đại, chất liệu vải cao cấp, khung gỗ tự nhiên bền chắc. Thiết kế tinh tế kết hợp giữa tiện nghi và phong cách tối giản."
+                data-price="19.500.000đ"
+                data-tag="Sofa"
+                data-specs="<ul><li><strong>Kích thước:</strong> 2100 x 900 x 750 mm</li><li><strong>Chất liệu:</strong> Vải bố cao cấp nhập khẩu, đệm mút D40 chống lún xẹp</li><li><strong>Khung xương:</strong> Gỗ sồi tự nhiên qua tẩm sấy chống mối mọt</li><li><strong>Bảo hành:</strong> 3 năm</li></ul>"
+                onclick="openProductModal(this)">Xem chi tiết</button>
+      </div>
+    </div>
+    <div class="product-card" data-category="sofa-da" data-name="sofa da sang trọng">
+      <div class="product-thumb">
+        <img src="../image/TNA_product_2.jpg" alt="Sofa da sang trọng"/>
+      </div>
+      <div class="product-info">
+        <h2>Sofa da sang trọng</h2>
+        <p>Sofa da thật Ý nhập khẩu, kiểu dáng tinh tế, phù hợp mọi phòng khách hiện đại.</p>
+        <div class="product-meta">
+          <span class="tag">Sofa Da</span>
+          <span class="price">28.900.000đ</span>
+        </div>
+        <button class="btn-detail" 
+                data-title="Sofa da sang trọng"
+                data-image="../image/TNA_product_2.jpg"
+                data-desc="Sofa bọc da thật nhập khẩu từ Ý, mang lại vẻ đẹp đẳng cấp vượt thời gian cho phòng khách của bạn."
+                data-price="28.900.000đ"
+                data-tag="Sofa Da"
+                data-specs="<ul><li><strong>Kích thước:</strong> 2600 x 950 x 800 mm</li><li><strong>Chất liệu:</strong> Da bò thật nhập khẩu từ Ý, đệm lông vũ kết hợp bông siêu mịn</li><li><strong>Khung xương:</strong> Gỗ tần bì cao cấp chịu lực cực tốt</li><li><strong>Bảo hành:</strong> 5 năm cho khung da</li></ul>"
+                onclick="openProductModal(this)">Xem chi tiết</button>
+      </div>
+    </div>
+    <div class="product-card" data-category="ban-tra" data-name="bàn trà kính đen">
+      <div class="product-thumb">
+        <img src="../image/TNA_product_3.jpg" alt="Bàn trà kính đen"/>
+      </div>
+      <div class="product-info">
+        <h2>Bàn trà kính đen</h2>
+        <p>Bàn trà mặt kính cường lực, chân inox mạ vàng, thiết kế tối giản mà nổi bật.</p>
+        <div class="product-meta">
+          <span class="tag">Bàn trà</span>
+          <span class="price">5.600.000đ</span>
+        </div>
+        <button class="btn-detail" 
+                data-title="Bàn trà kính đen"
+                data-image="../image/TNA_product_3.jpg"
+                data-desc="Bàn trà mặt kính cường lực sang trọng kết hợp chân inox mạ vàng gương tinh xảo, điểm nhấn hoàn hảo cho sofa phòng khách."
+                data-price="5.600.000đ"
+                data-tag="Bàn trà"
+                data-specs="<ul><li><strong>Kích thước:</strong> Đường kính 800mm, cao 450mm</li><li><strong>Chất liệu:</strong> Mặt kính cường lực đen dày 10mm, chân inox 304 mạ PVD vàng gương</li><li><strong>Bảo hành:</strong> 12 tháng</li></ul>"
+                onclick="openProductModal(this)">Xem chi tiết</button>
+      </div>
+    </div>
+    <div class="product-card" data-category="ban-an" data-name="bộ bàn ghế ăn 6 người">
+      <div class="product-thumb">
+        <img src="../image/TNA_product_4.jpg" alt="Bộ bàn ghế ăn 6 người"/>
+      </div>
+      <div class="product-info">
+        <h2>Bộ bàn ghế ăn 6 người</h2>
+        <p>Bàn ăn gỗ sồi, mặt đá tự nhiên, ghế nệm êm ái, phù hợp phòng ăn gia đình hiện đại.</p>
+        <div class="product-meta">
+          <span class="tag">Bàn ăn</span>
+          <span class="price">17.200.000đ</span>
+        </div>
+        <button class="btn-detail" 
+                data-title="Bộ bàn ghế ăn 6 người"
+                data-image="../image/TNA_product_4.jpg"
+                data-desc="Sự kết hợp hoàn mỹ giữa mặt đá cao cấp và ghế da êm ái, mang lại bữa ăn gia đình ấm cúng và sang trọng."
+                data-price="17.200.000đ"
+                data-tag="Bàn ăn"
+                data-specs="<ul><li><strong>Kích thước bàn:</strong> 1600 x 800 x 750 mm (Gồm 6 ghế ăn)</li><li><strong>Chất liệu:</strong> Mặt đá Ceramic chống trầy, chống thấm cao cấp, chân sắt bọc đồng</li><li><strong>Ghế ăn:</strong> Đệm bọc da PU cao cấp, chân sắt sơn tĩnh điện</li><li><strong>Bảo hành:</strong> 2 năm</li></ul>"
+                onclick="openProductModal(this)">Xem chi tiết</button>
+      </div>
+    </div>
+    <div class="product-card" data-category="ghe-thu-gian" data-name="ghế thư giãn cao cấp">
+      <div class="product-thumb">
+        <img src="../image/TNA_product_5.jpg" alt="Ghế thư giãn cao cấp"/>
+      </div>
+      <div class="product-info">
+        <h2>Ghế thư giãn cao cấp</h2>
+        <p>Thiết kế ergonomic, chất liệu vải nhung nhập khẩu, màu sắc trang nhã, hỗ trợ lưng tối ưu.</p>
+        <div class="product-meta">
+          <span class="tag">Ghế thư giãn</span>
+          <span class="price">6.900.000đ</span>
+        </div>
+        <button class="btn-detail" 
+                data-title="Ghế thư giãn cao cấp"
+                data-image="../image/TNA_product_5.jpg"
+                data-desc="Ghế thư giãn được thiết kế theo nhân trắc học giúp giảm mỏi lưng, chất liệu nhung cao cấp mềm mịn và êm ái."
+                data-price="6.900.000đ"
+                data-tag="Ghế thư giãn"
+                data-specs="<ul><li><strong>Kích thước:</strong> 900 x 850 x 950 mm</li><li><strong>Chất liệu:</strong> Vải nhung Tuyết nhập khẩu cao cấp, đệm bông nén đàn hồi</li><li><strong>Khung chân:</strong> Thép mạ chrome sáng bóng chịu lực cao</li><li><strong>Bảo hành:</strong> 18 tháng</li></ul>"
+                onclick="openProductModal(this)">Xem chi tiết</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Chi tiết sản phẩm -->
+  <div id="detailModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <div class="modal-body">
+        <div class="modal-left">
+          <img id="modalImage" src="" alt="Hình ảnh sản phẩm">
+        </div>
+        <div class="modal-right">
+          <span id="modalTag" class="tag">Tag</span>
+          <h2 id="modalName">Tên sản phẩm</h2>
+          <div id="modalPrice" class="price">0đ</div>
+          <p id="modalDesc">Mô tả sản phẩm</p>
+          <div class="specs-box">
+            <h3>Thông số kỹ thuật:</h3>
+            <div id="modalSpecs">Thông số chi tiết</div>
+          </div>
+          <div class="modal-actions">
+            <a id="modalContactZalo" href="https://zalo.me/0901234567" target="_blank" class="btn-modal-contact btn-zalo">
+              <i class="fa fa-commenting"></i> Liên hệ Zalo tư vấn
+            </a>
+            <a id="modalContactPhone" href="tel:0901234567" class="btn-modal-contact btn-phone">
+              <i class="fa fa-phone"></i> Gọi hotline: 0901.234.567
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <img src="../image/TNA_icon.jpg" class="footer-logo" alt="TNA Logo"/>
+      <span class="footer-brand">TNA Nội thất cao cấp</span>
+      <div class="footer-links">
+        <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="mailto:info@tna.com"><i class="fa fa-envelope"></i></a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2025 <b>TNA</b>. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Chế độ sáng/tối (Dark Mode) ---
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    
+    let isDark = localStorage.getItem('theme') === 'dark' || 
+                 (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    
+    function applyTheme(dark) {
+      if (dark) {
+        document.body.classList.add('dark-theme');
+        if (themeIcon) {
+          themeIcon.className = 'fa fa-sun-o';
+        }
+      } else {
+        document.body.classList.remove('dark-theme');
+        if (themeIcon) {
+          themeIcon.className = 'fa fa-moon-o';
+        }
+      }
+    }
+    
+    applyTheme(isDark);
+    
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        isDark = !isDark;
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        applyTheme(isDark);
+      });
+    }
+
+    // --- Scroll Elevation cho Header ---
+    const topAppBar = document.querySelector('.topnav');
+    if (topAppBar) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          topAppBar.classList.add('elevated');
+        } else {
+          topAppBar.classList.remove('elevated');
+        }
+      }, { passive: true });
+    }
+
+    // Hamburger Menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    window.addEventListener('click', e => {
+      if (window.innerWidth <= 700 && !mainNav.contains(e.target) && !menuBtn.contains(e.target)) {
+        mainNav.classList.remove('open');
+      }
+    });
+
+    // Tìm kiếm và Lọc sản phẩm
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    function filterProducts() {
+      const searchText = searchInput.value.toLowerCase().trim();
+      let activeFilter = 'all';
+      
+      filterBtns.forEach(btn => {
+        if (btn.classList.contains('active')) {
+          activeFilter = btn.getAttribute('data-filter');
+        }
+      });
+
+      productCards.forEach(card => {
+        const name = card.getAttribute('data-name');
+        const category = card.getAttribute('data-category');
+        
+        const matchesSearch = name.includes(searchText);
+        const matchesCategory = (activeFilter === 'all' || category === activeFilter);
+
+        if (matchesSearch && matchesCategory) {
+          card.style.display = 'flex';
+          // Hiệu ứng mờ dần mượt mà khi lọc
+          card.style.opacity = '0';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transition = 'opacity 0.3s ease';
+          }, 50);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterProducts);
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterProducts();
+      });
+    });
+
+    // Modal Chi tiết sản phẩm
+    const modal = document.getElementById('detailModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalName = document.getElementById('modalName');
+    const modalTag = document.getElementById('modalTag');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalSpecs = document.getElementById('modalSpecs');
+
+    function openProductModal(buttonElement) {
+      const title = buttonElement.getAttribute('data-title');
+      const image = buttonElement.getAttribute('data-image');
+      const desc = buttonElement.getAttribute('data-desc');
+      const price = buttonElement.getAttribute('data-price');
+      const tag = buttonElement.getAttribute('data-tag');
+      const specs = buttonElement.getAttribute('data-specs');
+
+      modalImg.src = image;
+      modalImg.alt = title;
+      modalName.textContent = title;
+      modalTag.textContent = tag;
+      modalPrice.textContent = price;
+      modalDesc.textContent = desc;
+      modalSpecs.innerHTML = specs;
+
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden'; // Ngăn cuộn trang dưới
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Đóng modal khi click ra ngoài vùng nội dung
+    window.addEventListener('click', e => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+
+  <!-- Floating Contact Bar -->
+  <div class="floating-contact-bar">
+    <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Lên đầu trang">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+    <a href="https://zalo.me/0768668333" class="contact-btn zalo-btn" target="_blank" title="Liên hệ Zalo (0768.668.333)">
+      <img src="../image/zalo.png" alt="Zalo" />
+    </a>
+    <a href="https://www.facebook.com/noithattnaa" class="contact-btn fb-btn" target="_blank" title="Liên hệ Facebook">
+      <i class="fa fa-facebook"></i>
+    </a>
+    <a href="tel:0768668333" class="contact-btn phone-btn" title="Gọi Hotline: 0768.668.333">
+      <i class="fa fa-phone"></i>
+      <span class="phone-tooltip">Hotline: 0768.668.333</span>
+    </a>
+    <a href="tel:0964378287" class="contact-btn phone-btn phone-secondary" title="Gọi Hotline: 0964.378.287">
+      <i class="fa fa-phone"></i>
+      <span class="phone-tooltip">Hotline: 0964.378.287</span>
+    </a>
+  </div>
+</body>
+</html>
