@@ -338,45 +338,8 @@
     </a>
   </div>
 
+  <script src="../js/sidebar.js?v=2.0" defer></script>
   <script>
-    // Dark Mode
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
-    let isDark = localStorage.getItem('theme') === 'dark' ||
-      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    function applyTheme(dark) {
-      document.body.classList.toggle('dark-theme', dark);
-      if (themeIcon) themeIcon.className = dark ? 'fa fa-sun-o' : 'fa fa-moon-o';
-    }
-    applyTheme(isDark);
-    if (themeToggleBtn) {
-      themeToggleBtn.addEventListener('click', () => {
-        isDark = !isDark;
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        applyTheme(isDark);
-      });
-    }
-
-    // Header scroll elevation
-    const siteHeader = document.querySelector('.site-header');
-    if (siteHeader) {
-      window.addEventListener('scroll', () => {
-        siteHeader.classList.toggle('elevated', window.scrollY > 10);
-      }, { passive: true });
-    }
-
-    // Hamburger
-    const menuBtn = document.getElementById('menuBtn');
-    const mainNav = document.getElementById('mainNav');
-    if (menuBtn && mainNav) {
-      menuBtn.addEventListener('click', () => mainNav.classList.toggle('open'));
-      window.addEventListener('click', e => {
-        if (window.innerWidth <= 768 && !mainNav.contains(e.target) && !menuBtn.contains(e.target)) {
-          mainNav.classList.remove('open');
-        }
-      });
-    }
-
     // Filter & Search
     const searchInput = document.getElementById('searchInput');
     const filterBtns = document.querySelectorAll('.filter-btn');
