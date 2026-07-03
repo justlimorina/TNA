@@ -17,38 +17,7 @@ function initSidebar() {
     });
   }
 
-  // --- Chế độ sáng/tối (Dark Mode) ---
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
-  
-  // Kiểm tra lưu trữ local hoặc cấu hình hệ thống
-  let isDark = localStorage.getItem('theme') === 'dark' || 
-               (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-  
-  function applyTheme(dark) {
-    if (dark) {
-      document.body.classList.add('dark-theme');
-      if (themeIcon) {
-        themeIcon.className = 'fa fa-sun-o';
-      }
-    } else {
-      document.body.classList.remove('dark-theme');
-      if (themeIcon) {
-        themeIcon.className = 'fa fa-moon-o';
-      }
-    }
-  }
 
-  // Áp dụng theme ban đầu
-  applyTheme(isDark);
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      isDark = !isDark;
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      applyTheme(isDark);
-    });
-  }
 
   // --- Scroll Elevation cho Header ---
   const siteHeader = document.querySelector('.site-header');

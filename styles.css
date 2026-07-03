@@ -40,35 +40,6 @@
   --footer-bottom:  #4B1D09;
 }
 
-/* Dark Theme Overrides */
-body.dark-theme {
-  --primary:        #C69A3A;
-  --primary-light:  #DDB671;
-  --gold:           #C69A3A;
-  --gold-light:     #DDB671;
-  --gold-pale:      #2A1F10;
-
-  --bg-color:       #121212;
-  --bg-light:       #1A1410;
-  --bg-section:     #1E1810;
-
-  --text-main:      #F5ECD5;
-  --text-sub:       #D4B896;
-  --text-muted:     #9A8568;
-
-  --card-bg:        #1E1810;
-  --card-shadow:    rgba(0, 0, 0, 0.4);
-  --border:         #3A2E20;
-
-  --topbar-bg:      #1A1410;
-  --topbar-text:    #DDB671;
-  --nav-bg:         #0D0905;
-  --nav-text:       #DDB671;
-
-  --footer-bg:      #1A1410;
-  --footer-text:    #DDB671;
-  --footer-bottom:  #0D0905;
-}
 
 /* =============================================
    RESET & BASE
@@ -228,26 +199,6 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 
-.theme-toggle {
-  background: none;
-  border: none;
-  color: var(--gold-light);
-  font-size: 1.25rem;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
-  transition: background 0.2s, transform 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.theme-toggle:hover {
-  background: rgba(255,255,255,0.12);
-  transform: scale(1.1);
-}
-
-body.dark-theme .theme-toggle { color: var(--gold); }
 
 .hotline-btn {
   background: var(--gold);
@@ -546,9 +497,6 @@ body.dark-theme .theme-toggle { color: var(--gold); }
   padding: 50px 32px;
 }
 
-body.dark-theme .featured-section {
-  background: #251209;
-}
 
 /* Featured Box (dynamic) */
 .section-title {
